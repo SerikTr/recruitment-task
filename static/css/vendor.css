@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Lato');
+* {
+  box-sizing: border-box;
+}
 
 html {
   line-height: 1.15;
@@ -7,17 +10,55 @@ html {
 
 body {
   margin: 0;
+  padding: 0;
+}
+
+
+.wrapper__header {
+  display: flex;
+  align-items: center;
+  margin: 30px 0 15px 0;
+}
+.brand__logo{
+  width: 64px;
+  height: 64px;
+  margin-bottom: 25px;
+}
+.wrapper__content {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.inner__content{
+  width: 330px;
+  background-color: white;
+  margin: 5px;
+  padding: 8px;
+}
+.channel__logo{
+  border-radius: 50%;
+}
+.channel__description {
+  display: flex;
+  padding: 0;
+  justify-content: space-around;
+}
+.heading__description {
+  color: grey;
 }
 
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin-left: 5px;
 }
 
 b,
 strong {
   font-weight: bolder;
 }
+ li {
+   list-style-type: none;
+ }
 
 button,
 input {
@@ -41,6 +82,7 @@ button::-moz-focus-inner {
 button:-moz-focusring {
   outline: 1px dotted ButtonText;
 }
+
 
 .button {
   -moz-appearance: none;
