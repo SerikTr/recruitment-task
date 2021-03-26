@@ -23,7 +23,10 @@ function fetchData(method, url) {
 fetchData('GET', requestUrl)
     .then(result => {
         const html = result.map((channel) => {
-            console.log(channel.thumbnails.default.url)
+            function numberWithCommas(x) {
+                x = x.replace(/[\s.,%]/g, '')
+                return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+            }
 
             return ` <div class="inner__content"><a href="${channel.customUrl}" target="_blank">
                         <img class="channel__logo" src="${channel.thumbnails.medium.url}" alt="${channel.title + ' logo'}"></a>
@@ -31,15 +34,15 @@ fetchData('GET', requestUrl)
                         <ul class="channel__description">
                             <li>
                                 <span class="heading__description">Subscribes:</span><br>
-                                <span>${channel.statistics.subscriberCount}</span>
+                                <span>${numberWithCommas(channel.statistics.subscriberCount)}</span>
                             </li>
                             <li>
                                 <span class="heading__description">Videos:</span><br>
-                                <span>${channel.statistics.videoCount}</span>
+                                <span>${numberWithCommas(channel.statistics.videoCount)}</span>
                             </li>
                             <li>
                                 <span class="heading__description">Views:</span><br>
-                                <span>${channel.statistics.viewCount}</span>
+                                <span>${numberWithCommas(channel.statistics.viewCount)}</span>
                             </li>
                         </ul></div>
                     `
@@ -48,5 +51,5 @@ fetchData('GET', requestUrl)
         <div class="wrapper__content">${html}</div>
         `
     })
-    .catch( e => console.error('Critical failure: ' + e.message))
+    .catch(e => console.error('Critical failure: ' + e.message))
 
