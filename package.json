@@ -4,7 +4,7 @@
   "main": "index.js",
   "description": "",
   "scripts": {
-    "start": "nodemon server/start.js",
+    "start": "node server/start.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "private": true,
@@ -14,8 +14,6 @@
     "koa": "2.5.2",
     "koa-static": "5.0.0"
   },
-  "devDependencies": {
-    "nodemon": "^2.0.7"
-  },
+
   "author": "Sergii Troian"
 }

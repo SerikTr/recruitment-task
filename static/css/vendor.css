@@ -17,12 +17,23 @@ body {
 .wrapper__header {
   display: flex;
   align-items: center;
-  margin: 30px 0 15px 0;
+  margin: 30px 0 0 0;
 }
-.brand__logo{
+.header__js-logo{
+  position: relative;
+  margin: 50px 10px 0 30px;
+}
+
+.header__js-logo:before{
+  position: absolute;
+  z-index: -10;
+  display: block;
+  content: '';
+  background-color: #FBD84A;
   width: 64px;
   height: 64px;
-  margin-bottom: 25px;
+  top: -30px;
+  left: -30px;
 }
 .wrapper__content {
   display: flex;
@@ -45,6 +56,10 @@ body {
 }
 .heading__description {
   color: grey;
+}
+
+.header {
+  margin: 0;
 }
 
 h1 {
@@ -282,6 +297,11 @@ button:-moz-focusring {
 
 .wrapper__main {
   order: 3;
+}
+
+mark {
+  color: white;
+  background-color: orange;
 }
 
 @media only screen and (min-width: 544px) {
