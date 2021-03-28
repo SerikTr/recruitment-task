@@ -5,6 +5,9 @@ window.addEventListener('DOMContentLoaded', () => {
     .then(results => showCardsChannels(results))
     .catch(e => console.error('Critical failure: ' + e.message))
 
-  // searchFilter
+  // function for searched channel
   searchChannel()
+
+
+
 })

@@ -8,5 +8,6 @@
 4. W metodzie numberWithCommas (plik xhr.js) dodajemy funkcyjność dla prawidlowego odtwarzania liczb na
     stronie zgodnie z Taskiem.
     
-// Filters and search
-5. W pliku filters.js znajdują się wszystkie filtry które są na głownej stronie aplikacji.
+// Filters
+5. W pliku filters.js mamy funkcje dla wyszukiwania potrzebnych wyników zgodnie z zapisem w input 
+

@@ -106,16 +106,13 @@ button:-moz-focusring {
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
   appearance: none;
-  background: transparent;
   border: 0;
   border-radius: 2px;
   box-sizing: border-box;
-  color: #222;
   cursor: pointer;
   display: inline-block;
   font-size: 14px;
   height: 40px;
-  line-height: 21px;
   line-height: 40px;
   margin: 0;
   overflow: hidden;
@@ -123,7 +120,6 @@ button:-moz-focusring {
   position: relative;
   text-align: center;
   text-decoration: none;
-  text-size-adjust: 100%;
   vertical-align: middle;
   white-space: nowrap;
   width: auto;
@@ -143,6 +139,12 @@ button:-moz-focusring {
   background: #ff7b33;
 }
 
+#contrast__btn {
+  position: absolute;
+  right: 90px;
+  top: 25px;
+}
+
 .choice {
   cursor: pointer;
   margin-top: 16px;
@@ -158,12 +160,9 @@ button:-moz-focusring {
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
-  line-height: 21px;
   line-height: 20px;
-  padding: 4px 0;
-  padding-left: 28px;
+  padding: 4px 0 0 28px;
   position: relative;
-  text-size-adjust: 100%;
 }
 
 .choice + .choice__label:active {
@@ -246,7 +245,6 @@ button:-moz-focusring {
   min-width: 0;
   outline: none;
   padding: 8px;
-  text-size-adjust: 100%;
   width: 100%;
 }
 .filter {
@@ -302,6 +300,9 @@ button:-moz-focusring {
 mark {
   color: white;
   background-color: orange;
+}
+.suggestions {
+  position: relative;
 }
 
 @media only screen and (min-width: 544px) {

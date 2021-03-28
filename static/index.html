@@ -9,6 +9,7 @@
 <body class="wrapper">
 <header class="wrapper__header">
     <h1 class="header"><span class="header__js-logo">JS</span>Channels</h1>
+    <button class="button" id="contrast__btn">Contrast color</button>
 </header>
 
 
@@ -20,6 +21,8 @@
 <div class="wrapper__filter">
     <div class="filter">
         <input class="filter__input" id="searchBar" type="text" placeholder="filter channels...">
+        <div class="suggestions">
+        </div>
     </div>
 </div>
 <aside class="wrapper__aside">
@@ -27,30 +30,33 @@
         <h3 class="sort__header">Sort channels by:</h3>
         <ul class="sort__options">
             <li>
-                <input class="choice choice--radio" name="sort" type="radio" id="sort-title">
+                <input class="choice choice--radio" name="sort" type="radio" value="sort-title" id="sort-title">
                 <label class="choice__label" for="sort-title">title</label>
             </li>
             <li>
-                <input class="choice choice--radio" name="sort" type="radio" id="sort-subscribers">
+                <input class="choice choice--radio" name="sort" type="radio" value="sort-subscribers"
+                       id="sort-subscribers">
                 <label class="choice__label" for="sort-subscribers">subscribers</label>
             </li>
             <li>
-                <input class="choice choice--radio" name="sort" type="radio" id="sort-videos">
+                <input class="choice choice--radio" name="sort" type="radio" value="sort-videos" id="sort-videos">
                 <label class="choice__label" for="sort-videos">videos</label>
             </li>
             <li>
-                <input class="choice choice--radio" name="sort" type="radio" id="sort-views">
+                <input class="choice choice--radio" name="sort" type="radio" value="sort-views" id="sort-views">
                 <label class="choice__label" for="sort-views">views</label>
             </li>
         </ul>
-        <button class="button">Clear</button>
+        <button class="button" id="button-clear">Clear</button>
+        <button class="button" id="button-reverse">Reverse</button>
     </div>
 </aside>
 
 
-        <script src="js/index.js"></script>
-        <script src="js/xhr.js"></script>
-        <script src="js/filters.js"></script>
+<script src="js/index.js"></script>
+<script src="js/filters.js"></script>
+<script src="js/xhr.js"></script>
+<script src="js/sort.js"></script>
 
 </body>
 </html>
