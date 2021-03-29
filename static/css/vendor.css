@@ -35,6 +35,9 @@ body {
   top: -30px;
   left: -30px;
 }
+.header__contrast {
+  color: white;
+}
 .wrapper__content {
   display: flex;
   text-align: center;
@@ -143,6 +146,11 @@ button:-moz-focusring {
   position: absolute;
   right: 90px;
   top: 25px;
+}
+
+
+.change-bg__color {
+  mix-blend-mode: difference;
 }
 
 .choice {
