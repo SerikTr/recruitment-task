@@ -44,40 +44,41 @@ function showCardsChannels(results) {
     }
     if (e.target.value === 'sort-subscribers') {
       results.sort((a, b) => {
-        return a.statistics.subscriberCount.replace(/[\s.,%]/g, '') - b.statistics.subscriberCount.replace(/[\s.,%]/g, '')
+        return removeSigns(a.statistics.subscriberCount, b.statistics.subscriberCount)
       })
       renderingCards(results)
     }
     if (e.target.value === 'sort-videos') {
       results.sort((a, b) => {
-        return a.statistics.videoCount.replace(/[\s.,%]/g, '') - b.statistics.videoCount.replace(/[\s.,%]/g, '')
+        return removeSigns(a.statistics.videoCount, b.statistics.videoCount)
       })
       renderingCards(results)
     }
     if (e.target.value === 'sort-views') {
       results.sort((a, b) => {
-        return a.statistics.viewCount.replace(/[\s.,%]/g, '') - b.statistics.viewCount.replace(/[\s.,%]/g, '')
+        return removeSigns(a.statistics.viewCount, b.statistics.viewCount)
       })
+      renderingCards(results)
+    }if (e.target.value){
       renderingCards(results)
     }
   })
 
   //--> Clear radio button and search field <--//
   document.getElementById('button-clear').addEventListener('click', (e) => {
-    if (e.target.innerText === 'CLEAR') {
-      const radioBtn = document.querySelectorAll('input[type="radio"]')
+    const radioBtn = document.querySelectorAll('input[type="radio"]')
+    if (e.target.innerText === 'CLEAR' || searchBar.value > 0) {
       radioBtn.forEach(btn => {
-        if (btn.checked || searchBar.value > 0) {
+        if (btn.checked) {
           btn.checked = false
-          searchBar.value = ''
         }
       })
-      renderingCards(results)
+      searchBar.value = ''
     }
   })
 }
 
-//--> Render items   <--//
+//--> Render page   <--//
 function renderingCards(results) {
   const html = results.map((channel) => {
 
@@ -110,3 +111,6 @@ function numberWithCommas(x) {
 }
 
 
+function removeSigns(a, b) {
+  return a.replace(/[\s.,%]/g, '') - b.replace(/[\s.,%]/g, '')
+}

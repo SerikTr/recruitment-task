@@ -13,11 +13,15 @@ body {
   padding: 0;
 }
 
+.wrapper {
+  max-width: 1680px;
+}
 
 .wrapper__header {
   display: flex;
   align-items: center;
   margin: 30px 0 0 0;
+  position: relative;
 }
 .header__js-logo{
   position: relative;
@@ -35,19 +39,26 @@ body {
   top: -30px;
   left: -30px;
 }
+#contrast__btn {
+  position: absolute;
+  right: 30px;
+  top: 0;
+}
 .header__contrast {
   color: white;
 }
 .wrapper__content {
-  display: flex;
-  text-align: center;
-  flex-wrap: wrap;
+  /*display: flex;*/
+  /*text-align: center;*/
+  /*flex-wrap: wrap;*/
+  display: grid;
+  grid-template-columns: 4fr;
 }
 .inner__content{
-  width: 330px;
-  background-color: white;
-  margin: 5px;
-  padding: 8px;
+  /*flex: 1 1 32.333%;*/
+  /*background-color: white;*/
+  /*margin: 5px;*/
+  /*padding: 8px;*/
 }
 .channel__logo{
   border-radius: 50%;
@@ -132,26 +143,27 @@ button:-moz-focusring {
   letter-spacing: 2px;
   text-transform: uppercase;
 }
-
-.button:active {
-  background: #ff9c66;
-}
-
 .button:focus,
 .button:hover {
   background: #ff7b33;
 }
-
-#contrast__btn {
-  position: absolute;
-  right: 90px;
-  top: 25px;
+.button:active {
+  background: #ff9c66;
 }
-
-
 .change-bg__color {
   mix-blend-mode: difference;
 }
+
+.button:last-child{
+  background-color: green;
+}
+.button:last-child:hover {
+  background-color: #1bb826;
+}
+.button:last-child:active{
+  background-color: #1bb826;
+}
+
 
 .choice {
   cursor: pointer;
@@ -258,6 +270,7 @@ button:-moz-focusring {
 .filter {
   background: #fff;
   padding: 8px;
+  max-width: 84.6rem;
 }
 .filter__input:focus,
 .filter__input:hover {
@@ -282,12 +295,6 @@ button:-moz-focusring {
   margin: 0 0 8px 0;
 }
 
-.wrapper {
-  font-family: 'Lato', sans-serif;
-  background: #eceff1;
-  display: flex;
-  flex-flow: column wrap;
-}
 
 .wrapper__header {
   order: 0;
@@ -313,6 +320,9 @@ mark {
   position: relative;
 }
 
+
+
+
 @media only screen and (min-width: 544px) {
   .sort {
     margin-right: 8px;
@@ -322,10 +332,11 @@ mark {
     margin: 8px;
     display:-ms-grid;
     display: grid;
-    -ms-grid-columns: 40% 60%;
+    -ms-grid-columns: 20% 80%;
     -ms-grid-rows: 80px 56px 1fr;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 80px 56px 1fr; 
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 80px 56px 1fr;
+    background-color: #EBEFF2;
   }
 
   .wrapper__header {
@@ -359,12 +370,21 @@ mark {
     grid-column: 2;
     grid-row: 3;
   }
-}
 
-@media only screen and (min-width: 768px) {
-  .wrapper {
-    display: grid;
-    -ms-grid-columns: 300px 1fr;
-    grid-template-columns: 300px 1fr;
+}
+@media only screen and (max-width: 544px) {
+
+  .wrapper__header {
+    position: static;
+  }
+
+  .header{
+    margin: 6px 6px 0 6px;
+    padding-bottom: 50px;
+  }
+
+  #contrast__btn {
+    top: 75px;
+    left: 6px;
   }
 }
