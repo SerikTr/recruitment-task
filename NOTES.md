@@ -22,7 +22,7 @@
     oraz ostatniego, przy warunkach że to jest kolejna wizyta przez użytkownika.
      Pod kluczem number of page visit, licznik wejść  przez jakiegokolwiek użytkownika.
      Kożystamy z  API https://api.countapi.xyz/update/florin-pop-test/test-site/?amount=1 . Gdzie możemy 
-     ustawić dowolną liczbe ?amount= , oprócz 0.
+     ustawić  liczbe +1 lub -1.
 
 // UTM
 1. Do pliku utm.js zostałą zainicjalizowana zmienna utm, która pozwała na dodawanie utm'ema do każdego 
