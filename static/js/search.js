@@ -8,7 +8,7 @@ window.addEventListener('DOMContentLoaded', () => {
       const searchString = e.target.value.toUpperCase().trim()
       const channelsContainer = document.querySelector('.wrapper__content')
       const channels = channelsContainer.getElementsByClassName('inner__content')
-      const suggestion = document.querySelector('.suggestions')
+      const channelList = document.getElementById('channelList')
       const array = []
       for (let i = 0; i < channels.length; i++) {
         let title = channels[i].querySelector('.title__content')
@@ -24,9 +24,9 @@ window.addEventListener('DOMContentLoaded', () => {
         }
       }
       let html = array.map(title =>
-        `<div class="suggestion__item">${title}</div>`
+        `<option>${title}</option>`
       ).join('')
-      suggestion.innerHTML = html
+      channelList.innerHTML = html
     })
   }
 
