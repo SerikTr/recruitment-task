@@ -12,7 +12,7 @@
 // Search
 1. W pliku search.js mamy funkcje dla wyszukiwania potrzebnych wyników zgodnie z potrzebami użytkownika
     za pomocą input.
-2. Został dodany blok z classem suggestion, dla pomocy w wyszukiwaniu dostępnych kanałow.    
+2. Został dodany blok datalist dla pomocy w wyshukiwaniu.    
 
 // Contrast
 1. W header został dodany przycisk CONTRAST COLOR, który  dynamicznie odwróca kolory w aplikacji.
@@ -21,8 +21,8 @@
 1. W count.js została zainstalowana funkcja która przekazuje do localStorage date aktualnego wejscia
     oraz ostatniego, przy warunkach że to jest kolejna wizyta przez użytkownika.
      Pod kluczem number of page visit, licznik wejść  przez jakiegokolwiek użytkownika.
-     Kożystamy z  API https://api.countapi.xyz/update/florin-pop-test/test-site/?amount=1 . Gdzie możemy 
-     ustawić  liczbe +1 lub -1.
+     Kożystamy z  API https://api.countapi.xyz/update/florin-pop-test/test-site/?amount=1 .
+      Gdzie możemy ustawić liczbe +1 lub -1
 
 // UTM
 1. Do pliku utm.js zostałą zainicjalizowana zmienna utm, która pozwała na dodawanie utm'ema do każdego 
