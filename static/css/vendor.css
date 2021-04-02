@@ -321,15 +321,6 @@ mark {
     background-color: orange;
 }
 
-.suggestions {
-    position: relative;
-}
-
-.suggestion__item {
-    background-color: white;
-    line-height: 30px;
-    opacity: 75%;
-}
 
 @media only screen and (max-width: 1280px) {
 
