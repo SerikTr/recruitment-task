@@ -72,8 +72,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
     //--> Clear radio button and search field <--//
     document.getElementById('button-clear').addEventListener('click', (e) => {
-      const radioBtn = document.querySelectorAll('input[type="radio"]')
-      const suggestion = document.querySelector('.suggestions')
+      const radioBtn = document.querySelectorAll('input[type="radio"]')     
       if (e.target.innerText === 'CLEAR' || searchBar.value > 0) {
         radioBtn.forEach(btn => {
           if (btn.checked) {
@@ -81,7 +80,6 @@ window.addEventListener('DOMContentLoaded', () => {
           }
         })
         searchBar.value = ''
-        suggestion.innerHTML = ''
       }
       renderingCards(localData)
     })
